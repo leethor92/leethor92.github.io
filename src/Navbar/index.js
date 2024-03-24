@@ -1,32 +1,39 @@
-import { useState } from 'react'
-import style from './style.css'
-import { BottomNavigation, BottomNavigationAction } from '@mui/material'
+import './style.css'
+import { AppBar, Toolbar, Link, IconButton } from '@mui/material'
 import { InfoRounded, Home, Email, Engineering } from '@mui/icons-material'
 
 export default function Navbar() {
-  const [value, setValue] = useState(0)
-
-  const handleChange = (newValue) => {
-    setValue(newValue)
-  }
 
   return (
     <div>
-      <BottomNavigation
-        classes={style.bottom_nav}
-        showLabels
-        value={value}
-        onChange={(e, newValue) => handleChange(newValue)}
+      <AppBar
+        classes="nav_bar"
+        position="static"
+        color="default"
       >
-        <BottomNavigationAction label="Home" icon={<Home />}/>
-        <BottomNavigationAction label="About" icon={<InfoRounded />} />
-        <BottomNavigationAction label="Skills" icon={<Engineering />}/>
-        <BottomNavigationAction label="Projects" icon={<InfoRounded />}/>
-        <BottomNavigationAction label="Contact" icon={<Email />}/>
-      </BottomNavigation>
-      <header className="App-header">
-        Test Text
-      </header>
+        <Toolbar>
+          <Link href="/" underline="none" label="Home">
+          <IconButton>
+            <Home />
+          </IconButton>
+          </Link>
+          <Link label="About">
+            <IconButton>
+              <InfoRounded />
+            </IconButton>
+          </Link>
+          <Link label="Skills" icon={<Engineering />}>
+            <IconButton>
+              <Engineering />
+            </IconButton>
+          </Link>
+          <Link label="Contact" icon={<Email />}>
+            <IconButton>
+              <Email />
+            </IconButton>
+          </Link>
+        </Toolbar>
+        </AppBar>
     </div>
   ) 
 }
