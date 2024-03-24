@@ -1,13 +1,20 @@
-import './style.css'
 import { AppBar, Toolbar, Link, IconButton } from '@mui/material'
 import { InfoRounded, Home, Email, Engineering } from '@mui/icons-material'
+import { styled } from "@mui/system"
+
+const useStyles = styled({
+  root: {
+    justify: 'center',
+    alignItems: 'center',
+  }
+})
 
 export default function Navbar() {
-
+  const classes = useStyles({})
   return (
     <div>
       <AppBar
-        classes="nav_bar"
+        classes={classes.root}
         position="static"
         color="default"
       >

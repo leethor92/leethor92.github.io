@@ -1,18 +1,43 @@
-import './style.css'
 import avatar from '../assets/avatar.png'
+import cover from '../assets/cover.png'
+import { styled } from "@mui/system"
+import { Typography, Grid } from '@mui/material'
 
+const StyledGrid = styled(Grid)({
+  display: 'flex',
+  flexDirection: 'column',
+  minHeight: '100vh',
+  backgroundImage: `url(${cover})`, // Use backticks for string interpolation
+  backgroundSize: 'cover',
+})
+
+const Heading = styled(Typography)({
+  fontFamily: 'Raleway',
+  color: 'white',
+  paddingTop: '20px',
+})
+
+const Subtitle = styled(Typography)({
+  fontFamily: 'Raleway',
+  color: 'white',
+  fontSize: '18px',
+  textAlign: 'center',
+})
 export default function Home() {
-
     return (
-        <div className="App-header">
-        <img 
-          src={avatar}
-          alt='avatar'
-        />
-        <h1 className="primary_heading">
-          Lee Thornton
-        </h1>
-        <h2 className="sub_heading">Full Stack Engineer & Technology Enthusiast</h2>
+      <div id='home'>
+        <StyledGrid justify='center' alignItems='center'>
+          <img 
+            src={avatar}
+            alt='avatar'
+          />
+          <Heading variant='h2'>
+            Lee Thornton
+          </Heading>
+          <Subtitle variant='subtitle1'>
+            Full Stack Engineer & Technology Enthusiast
+          </Subtitle>
+        </StyledGrid>
       </div>
     )
 }
