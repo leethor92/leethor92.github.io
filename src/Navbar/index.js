@@ -2,21 +2,15 @@ import { AppBar, Toolbar, Link, IconButton } from '@mui/material'
 import { InfoRounded, Home, Email, Engineering } from '@mui/icons-material'
 import { styled } from "@mui/system"
 
-const useStyles = styled({
-  root: {
-    justify: 'center',
-    alignItems: 'center',
-  }
+const StyledAppBar = styled(AppBar)({
+  transition: 'background-color 0.5s ease-in-out'
 })
 
 export default function Navbar() {
-  const classes = useStyles({})
   return (
     <div>
-      <AppBar
-        classes={classes.root}
-        position="static"
-        color="default"
+      <StyledAppBar
+        elevation={5}
       >
         <Toolbar>
           <Link href="/" underline="none" label="Home">
@@ -40,7 +34,7 @@ export default function Navbar() {
             </IconButton>
           </Link>
         </Toolbar>
-        </AppBar>
+        </StyledAppBar>
     </div>
   ) 
 }
