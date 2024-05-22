@@ -10,8 +10,8 @@ import { palette, primaryCol } from '../theme'
 
 const kargo = [
   'Creating software to help advertisers scale full-funnel performance marketing campaigns on Facebook, Instagram, Pinterest, SnapChat & TikTok',
-  'Working within the creative team, building a Photoshop-like and After Effects tools to allow users to create and publish image & video advertisements',
-  'Full-stack engineer, working with tech such as React, Ruby On Rails, Postgres, Heroku and AWS'
+  'Working within the creative team, building a Photoshop-like and After Effects tools to allow users to create and publish image & video creatives at large volumes',
+  'Full-stack engineer, working with tech such as React, Node, Ruby On Rails, Postgres, Heroku and AWS'
 ]
 
 const cgm = [
@@ -144,7 +144,7 @@ function About() {
           }}
         >
           <i style={{ fontFamily: 'Raleway' }}>
-            Kargo, Sofware Engineer - May 2021 to present
+            Kargo, Sofware Engineer - May 2021 to Present
           </i>
 
           <Divider color={theme.fontCol} />
@@ -187,7 +187,7 @@ function About() {
           }}
         >
           <i style={{ fontFamily: 'Raleway' }}>
-            CGM, Sofware Engineer - June 2020 to December 2020
+            CGM, Sofware Engineer - May 2019 to May 2021
           </i>
 
           <Divider color={theme.fontCol} />
