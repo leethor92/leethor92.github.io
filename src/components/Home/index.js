@@ -1,5 +1,5 @@
-import avatar from '../assets/avatar.png'
-import cover from '../assets/cover.png'
+import avatar from '../../assets/avatar.png'
+import cover from '../../assets/cover.png'
 import { styled } from "@mui/system"
 import { Typography, Grid } from '@mui/material'
 
@@ -9,6 +9,7 @@ const StyledGrid = styled(Grid)({
   minHeight: '100vh',
   backgroundImage: `url(${cover})`, // Use backticks for string interpolation
   backgroundSize: 'cover',
+  paddingTop: '60px',
 })
 
 const Heading = styled(Typography)({
