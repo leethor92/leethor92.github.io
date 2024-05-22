@@ -1,5 +1,6 @@
 import { Typography, Grid } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
+import me from '../../assets/me.png'
 import { ThemeContext } from '../../themeProvider'
 import './index.css'
 import Divider from '../Divider'
@@ -19,6 +20,12 @@ function About() {
       >
         <Typography variant='h4' style={{ color: theme.fontCol }}>About</Typography>
         <Divider color={primaryCol} />
+        <img
+          src={me}
+          alt='me'
+          class="responsive-image"
+        />
+        <Divider color={theme.fontCol} />
         <Typography
           style={{
             padding: '20px',
@@ -31,7 +38,6 @@ function About() {
           These include AI, web & app development.
           Computer hardware with interests in data science and lots more.
         </Typography>
-        <Divider color={primaryCol} />
       </Grid>
     </div>
   )
