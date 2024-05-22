@@ -1,15 +1,16 @@
 import { Typography, Grid } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { ThemeContext } from '../../themeProvider'
+import './index.css'
 import Divider from '../Divider'
-import {palette, primaryCol } from '../theme'
+import { palette, primaryCol } from '../theme'
 
 function About() {
   const { lightTheme } = useTheme(ThemeContext)
   const theme = palette(!lightTheme)
 
   return (
-    <div className="about" style={{ backgroundColor: theme.background1Col }}>
+    <div id="about" className={"root"} style={{ backgroundColor: theme.background1Col }}>
       <Grid
         container
         alignItems='center'
@@ -27,8 +28,8 @@ function About() {
         >
           Hi, I'm <b style={{ color: primaryCol }}>Lee</b>! I am a full
           stack Engineer with a passion for all things IT related!
-          These include AI, web & app development, computer hardware with
-          interests in data science and lots more.
+          These include AI, web & app development.
+          Computer hardware with interests in data science and lots more.
         </Typography>
         <Divider color={primaryCol} />
       </Grid>
