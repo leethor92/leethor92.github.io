@@ -1,11 +1,31 @@
 import { Typography, Grid, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
-import { School, ArrowForward } from '@mui/icons-material'
+import { School, ArrowForward, Work } from '@mui/icons-material'
 import { useTheme } from '@mui/material/styles'
+import { styled } from '@mui/system'
 import me from '../../assets/me.png'
 import { ThemeContext } from '../../themeProvider'
 import './index.css'
 import Divider from '../Divider'
 import { palette, primaryCol } from '../theme'
+
+const kargo = [
+  'Creating software to help advertisers scale full-funnel performance marketing campaigns on Facebook, Instagram, Pinterest, SnapChat & TikTok',
+  'Working within the creative team, building a Photoshop-like and After Effects tools to allow users to create and publish image & video advertisements',
+  'Full-stack engineer, working with tech such as React, Ruby On Rails, Postgres, Heroku and AWS'
+]
+
+const cgm = [
+  'x',
+  'x',
+  'x',
+]
+
+const ItalicHeader = styled(Typography)({
+  padding: '20px',
+  width: '70%',
+  textAlign: 'center',
+  fontSize: '18px',
+})
 
 function About() {
   const { lightTheme } = useTheme(ThemeContext)
@@ -60,8 +80,7 @@ function About() {
           />
           Education
         </Typography>
-        <Typography
-          className="italicHeader"
+        <ItalicHeader
           style={{
             color: theme.fontCol,
           }}
@@ -104,7 +123,106 @@ function About() {
               </List>
             </Grid>
           </Grid>
+        </ItalicHeader>
+        <Typography
+          variant='h5'
+          style={{ color: theme.fontCol, display: 'flex' }}
+        >
+          <Work
+            fontSize='large'
+            style={{
+              color: primaryCol,
+              paddingRight: '10px',
+            }}
+          />
+          Experience
         </Typography>
+
+        <ItalicHeader
+          style={{
+            color: theme.fontCol,
+          }}
+        >
+          <i style={{ fontFamily: 'Raleway' }}>
+            Kargo, Sofware Engineer - May 2021 to present
+          </i>
+
+          <Divider color={theme.fontCol} />
+
+          <Grid
+            container
+            direction='row'
+            justify='center'
+            alignContent='center'
+            alignItems='center'
+          >
+            <Grid item sm={9}>
+              <List>
+                {kargo.map((item, index) => (
+                  <ListItem>
+                    <ListItemIcon>
+                      <ArrowForward
+                        fontSize='small'
+                        style={{ color: primaryCol }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary={item} />
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
+            <Grid item sm={3}>
+              <img
+                src={require('../../assets/kargo.png')}
+                alt='distilled'
+                className="roundImage"
+              />
+            </Grid>
+          </Grid>
+        </ItalicHeader>
+
+        <ItalicHeader
+          style={{
+            color: theme.fontCol,
+          }}
+        >
+          <i style={{ fontFamily: 'Raleway' }}>
+            CGM, Sofware Engineer - June 2020 to December 2020
+          </i>
+
+          <Divider color={theme.fontCol} />
+
+          <Grid
+            container
+            direction='row'
+            justify='center'
+            alignContent='center'
+            alignItems='center'
+          >
+            <Grid item sm={3}>
+              <img
+                src={require('../../assets/cgm.jpeg')}
+                alt='reliaquest'
+                className="roundImage"
+              />
+            </Grid>
+            <Grid item sm={9}>
+              <List>
+                {cgm.map((item, index) => (
+                  <ListItem>
+                    <ListItemIcon>
+                      <ArrowForward
+                        fontSize='small'
+                        style={{ color: primaryCol }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary={item} />
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
+          </Grid>
+        </ItalicHeader>
       </Grid>
     </div>
   )
