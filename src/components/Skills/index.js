@@ -37,7 +37,7 @@ const tech = ['Docker', 'Kubernetes', 'Git', 'Selenium', 'AWS']
 
 export default function Skills() {
   const { lightTheme } = useContext(ThemeContext)
-  const theme = palette(lightTheme)
+  const theme = palette(!lightTheme)
 
   return (
     <div

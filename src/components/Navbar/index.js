@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { AppBar, Toolbar, List, ListItemIcon, ListItem, Grid } from '@mui/material'
 import './index.css'
 import { Link } from 'react-scroll'
-import { InfoRounded, Home, Email, Engineering, PhotoLibrary } from '@mui/icons-material'
+import { InfoRounded, Home, Email, Engineering } from '@mui/icons-material'
 import { useTheme } from '@mui/material/styles'
 import { styled } from '@mui/system'
 import { BrowserRouter } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import { ThemeContext } from '../../themeProvider'
-import { primaryCol, palette } from '../theme'
+import { primaryCol } from '../theme'
 
 
 
@@ -31,9 +31,8 @@ const StyledList = styled(List)({
 })
 
 export default function Navbar() {
-  const { lightTheme, toggleTheme } = useTheme(ThemeContext)
+  const { lightTheme } = useTheme(ThemeContext)
   const [activeLink, setActiveLink] = useState('home')
-  const theme = palette(lightTheme)
   const handleState = (to) => {
     if (to === 'home') {
       setActiveLink(true)
@@ -104,20 +103,6 @@ export default function Navbar() {
                 <ListItem button style={{ borderRadius: 25 }}>
                   <StyledIcon>
                     <Engineering />
-                  </StyledIcon>
-                </ListItem>
-              </Link>
-              <Link
-                activeClass="active-link"
-                onSetActive={handleState}
-                spy={true}
-                smooth={true}
-                to='projects'
-                duration={500}
-              >
-                <ListItem button style={{ borderRadius: 25 }}>
-                  <StyledIcon>
-                    <PhotoLibrary  />
                   </StyledIcon>
                 </ListItem>
               </Link>
