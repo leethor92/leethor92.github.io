@@ -15,9 +15,9 @@ const kargo = [
 ]
 
 const cgm = [
-  'x',
-  'x',
-  'x',
+  'Developed and implemented backend and frontend software changes for the company website using C#, HTML, CSS, Angular.js, and SQL, based on JIRA requirements.',
+  'Managed and edited data in a relational database, creating tasks for data population and fixing or removing incorrect information.',
+  'Supervised 2 interns, performed code reviews, and communicated with offshore teams in the U.S. for status updates and project planning.',
 ]
 
 const ItalicHeader = styled(Typography)({
@@ -174,7 +174,7 @@ function About() {
             <Grid item sm={3}>
               <img
                 src={require('../../assets/kargo.png')}
-                alt='distilled'
+                alt='kargo'
                 className="roundImage"
               />
             </Grid>
@@ -202,7 +202,7 @@ function About() {
             <Grid item sm={3}>
               <img
                 src={require('../../assets/cgm.jpeg')}
-                alt='reliaquest'
+                alt='cgm'
                 className="roundImage"
               />
             </Grid>
